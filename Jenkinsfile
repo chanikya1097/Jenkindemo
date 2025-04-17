@@ -13,9 +13,9 @@ pipeline {
         }
 
         stage('Deploy to Tomcat') {
-            steps {
-                bat 'copy target\\*.war "C:\\Program Files\\apache-tomcat-9.0.104\\apache-tomcat-9.0.104\\webapps\\"'
-            }
-        }
+    steps {
+        bat 'copy target\\task-0.0.1-SNAPSHOT.war "C:\\Program Files\\apache-tomcat-9.0.104\\apache-tomcat-9.0.104\\webapps\\task.war"'
+    }
+}
     }
 }
