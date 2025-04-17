@@ -6,9 +6,15 @@ pipeline {
     }
 
     stages {
-        stage('Build') {
+        stage('Build WAR') {
             steps {
                 bat 'mvn clean package'
+            }
+        }
+
+        stage('Deploy to Tomcat') {
+            steps {
+                bat 'copy target\\*.war "C:\\Program Files\\apache-tomcat-9.0.104\\apache-tomcat-9.0.104\\webapps\\"'
             }
         }
     }
