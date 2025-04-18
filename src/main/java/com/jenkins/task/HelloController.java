@@ -13,6 +13,8 @@ public class HelloController {
 
     @GetMapping("/hello")
     public String hello() {
+        System.out.println(">>> /hello endpoint was hit!");
         return "This is the /hello endpoint!";
     }
+
 }
